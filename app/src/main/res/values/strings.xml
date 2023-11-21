@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">informacoes dos times br</string>
+    <string name="senha">Senha</string>
+    <string name="login">Login</string>
+    <string name="entar">Entar</string>
+    <string name="confirmarSenha">Confirmar senha</string>
+    <string name="nome">nome</string>
+    <string name="criar">Criar conta</string>
+</resources>
