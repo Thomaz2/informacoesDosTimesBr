@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "207341948237",
+    "project_id": "informacoes-dos-times",
+    "storage_bucket": "informacoes-dos-times.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207341948237:android:7478069a86d045f226fb04",
+        "android_client_info": {
+          "package_name": "com.example.informacoesdostimesbr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi5hHdW02BvJAjJjhgtq8ap1dz-rfz35A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

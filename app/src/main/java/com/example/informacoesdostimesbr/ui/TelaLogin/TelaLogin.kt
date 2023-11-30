@@ -105,7 +105,8 @@ fun TelaLogin(
         Spacer(modifier = Modifier.size(10.dp))
         Button(
             onClick = {
-                if ( senha == "1234" && login == "joao@gmail.com") {
+                if ( senha == "1234" && login == "ph" +
+                    "") {
                     cadastrar = false
                     logarErro = false
                     controleNavegacao.navigate("TelaInformacaoDeText")

@@ -7,9 +7,4 @@
     <string name="nome">nome</string>
     <string name="criar">Criar conta</string>
     <string name="logar_erro"> login ou senha incorreto</string>
-    <string name="informacao_corinthians">O Sport Club Corinthians Paulista,
-        comumente referido como Corinthians, é um clube poliesportivo brasileiro da cidade de São Paulo,
-        capital do estado de São Paulo. Foi fundado como uma equipe de futebol no dia 1 de setembro de
-        1910 por um grupo de operários do bairro Bom Retiro. Seu nome foi inspirado no Corinthian
-        Football Club de Londres, que excursionava pelo Brasil.</string>
 </resources>

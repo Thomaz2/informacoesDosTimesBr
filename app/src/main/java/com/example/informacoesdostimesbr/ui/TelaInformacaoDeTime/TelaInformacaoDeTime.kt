@@ -10,26 +10,38 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
+import androidx.compose.material3.CenterAlignedTopAppBar
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.informacoesdostimesbr.R
 import com.example.informacoesdostimesbr.model.Times
+import kotlin.text.Typography.times
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TelaInformacaoDeTime(
     espacoDasBarras: PaddingValues,
     controleNavegacao: NavController
 ){
+
     Column(
         modifier = Modifier
             .padding(espacoDasBarras)
@@ -47,25 +59,24 @@ fun TelaInformacaoDeTime(
     }
 }
 
-@Preview (showSystemUi = true)
+
+
 @Composable
-fun ListaTimes(listaTimes:List<Times>){
+fun ListaTimes(ListaTimes:List<Times>){
     LazyColumn() {
 
-        items(listaTimes){
+        items(ListaTimes){
             times ->
-            CardTimes()
+            CardTimes(times)
         }
 
     }
 }
 
-@Preview
 @Composable
 fun CardTimes(
-    Times: Times
+    Times : Times
 ){
-
     Card(
         modifier = Modifier
             .fillMaxSize()
@@ -75,14 +86,19 @@ fun CardTimes(
             Row{
                 Image(
                     painter = painterResource
-                        (id = R.drawable.corinthians),
+                        (id = Times.imagem),
                     contentDescription = null,
                     modifier = Modifier
                         .size(150.dp)
                 )
                 Column (){
-                    Text("Informação do corinthians:")
-                    Text(text = "")
+                    Text(text = Times.nomeTime,
+                        fontSize = 50.sp,
+                        color = Color.Black,
+                        )
+                    Text(text = Times.informacao,
+                        fontSize = 30.sp,
+                        color = Color.Black)
                 }
                 Icon(
                     imageVector = Icons.Filled.KeyboardArrowDown,
@@ -90,9 +106,16 @@ fun CardTimes(
                 )
             }
             Column {
-                Text(text = "")
+                Text(text = "${Times.anoDeCriacao}")
+                Text(text = "${Times.titulos}")
 
             }
         }
     }
+}
+
+@Preview
+@Composable
+fun Previews(){
+    
 }
